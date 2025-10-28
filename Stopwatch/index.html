@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stopwatch</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="circle-container">
+    <svg>
+      <defs>
+        <linearGradient id="gradient" x1="1" y1="0" x2="0" y2="1">
+  <stop offset="0%" stop-color="#ff5252"/>
+  <stop offset="50%" stop-color="#e53935"/>
+  <stop offset="100%" stop-color="#b71c1c"/>
+</linearGradient>
+      </defs>
+      <!-- Background & Progress Circle -->
+      <circle class="background" cx="150" cy="150" r="144"/>
+      <circle class="progress" cx="150" cy="150" r="144"/>
+    </svg>
+    <div class="time-display" id="display">00:00:00:000</div>
+  </div>
+
+  <div class="buttons">
+    <button class="start" onclick="start()">▶ Start</button>
+    <button class="pause" onclick="pause()">⏸ Pause</button>
+    <button class="stop" onclick="stop()">⏹ Stop</button>
+    <button class="reset" onclick="reset()">⟳ Reset</button>
+    <button class="lap" onclick="lap()">Lap</button>
+  </div>
+  <button class="clear" onclick="clearLaps()">Clear All</button>
+
+  <div id="laps"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
